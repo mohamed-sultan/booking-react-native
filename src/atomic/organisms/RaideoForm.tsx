@@ -1,81 +1,31 @@
-import React, {forwardRef, useImperativeHandle} from 'react';
-import {View} from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 import TextButton from '@atoms/TextButton';
 import AppText from '@molecules/AppText';
-import {useForm, Controller} from 'react-hook-form';
-import {yupResolver} from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { FormStateStore, useFormState } from '@store/useFormState';
+import { t } from 'i18next';
 
 interface RaideoFormProps {
-  onSubmit?: (data: RaideoFormValues) => void;
+  value: 'yes' | 'no' | '';
+  onChange: (val: 'yes' | 'no') => void;
+  error?: string;
 }
 
-interface RaideoFormValues {
-  option: 'yes' | 'no' | '';
-}
-
-const schema = yup.object().shape({
-  option: yup.string().oneOf(['yes', 'no'], 'Please select an option').required('Please select an option'),
-});
-
-const RaideoForm = forwardRef(({ onSubmit}: RaideoFormProps, ref) => {
-  const option = useFormState((state:FormStateStore) => state.option);
-  const setOption = useFormState((state:FormStateStore) => state.setOption);
-
-  const {
-    control,
-    formState: {errors, isValid},
-    getValues,
-    trigger,
-    reset,
-    setValue,
-    handleSubmit,
-  } = useForm<RaideoFormValues>({
-    resolver: yupResolver(schema) as any,
-    defaultValues: {option: option || ''},
-    mode: 'onChange',
-  });
-
-  // Sync form state to Zustand on change
-  const handleSelect = (val: 'yes' | 'no') => {
-    setValue('option', val, {shouldValidate: true});
-    setOption(val);
-  };
-
-  useImperativeHandle(ref, () => ({
-    isValid,
-    getValues,
-    trigger,
-    reset,
-    submit: handleSubmit(onSubmit || (() => {})),
-  }), [isValid, getValues, trigger, reset, handleSubmit, onSubmit]);
-
+const RaideoForm: React.FC<RaideoFormProps> = ({ value, onChange, error }) => {
   return (
-    <View >
-      <Controller
-        control={control}
-        name="option"
-        render={({field: {value}}) => (
-          <>
-            <TextButton
-              label="Yes"
-              selected={value === 'yes'}
-              onPress={() => handleSelect('yes')}
-            />
-            <TextButton
-              label="No"
-              selected={value === 'no'}
-              onPress={() => handleSelect('no')}
-            />
-          </>
-        )}
+    <View>
+      <TextButton
+        label={t('answer.yes')}
+        selected={value === 'yes'}
+        onPress={() => onChange('yes')}
       />
-      {errors.option && (
-        <AppText >{errors.option.message}</AppText>
-      )}
+      <TextButton
+        label={t('answer.no')}
+        selected={value === 'no'}
+        onPress={() => onChange('no')}
+      />
+      {error && <AppText>{error}</AppText>}
     </View>
   );
-});
+};
 
 export default RaideoForm;

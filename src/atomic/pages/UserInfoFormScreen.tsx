@@ -1,24 +1,33 @@
-import React, {useRef} from 'react';
-import {SafeAreaView, StatusBar, Alert, Text} from 'react-native';
+import React, { useRef } from 'react';
+import {
+  SafeAreaView,
+  StatusBar,
+  Alert,
+  Text,
+  ScrollView,
+  View,
+} from 'react-native';
 import Heading from '@atoms/Heading';
 import UserInfoForm from '@organisms/UserInfoForm';
 import PoweredBy from '@molecules/PoweredBy';
 import Button from '@atoms/Button';
 import ProgressBarWithExit from '@molecules/ProgressBarWithExit';
-import  { useThemeColors } from '@store/useTheme';
+import useThemeStore, { useThemeColors } from '@store/useTheme';
 import { ROUTES } from '@navigation/AppNavigator';
 import { useFormState } from '@store/useFormState';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-import {StyleSheet} from 'react-native';
-import {lightColors} from '@constants/colors';
+import { StyleSheet } from 'react-native';
+import { lightColors } from '@constants/colors';
+import { t } from 'i18next';
+import ThemeToggleButton from '@molecules/ThemeToggleButton';
 
-const UserInfoFormScreen = ({navigation}: any) => {
+const UserInfoFormScreen = ({ navigation }: any) => {
   const formRef = useRef<any>(null);
   const colors = useThemeColors();
-  const setActiveForm = useFormState((state) => state.setActiveForm);
+  const setActiveForm = useFormState(state => state.setActiveForm);
 
   const styles = getStyles(colors);
-
 
   const handleContinue = async () => {
     const isValid = await formRef.current?.trigger();
@@ -26,14 +35,19 @@ const UserInfoFormScreen = ({navigation}: any) => {
       setActiveForm(1);
       navigation.navigate(ROUTES.SELECTIONS);
     } else {
-      Alert.alert('Form is invalid', 'Please correct the highlighted fields.');
+      // Alert.alert('Form is invalid', 'Please correct the highlighted fields.');
     }
   };
+  const isDark = useThemeStore(state => state.isDark);
 
   return (
     <>
-      <StatusBar backgroundColor={'white'} barStyle={'dark-content'} />
+      <StatusBar
+        barStyle={isDark ? 'light-content' : 'dark-content'}
+        backgroundColor={isDark ? '#000' : '#fff'}
+      />
       <SafeAreaView style={styles.container}>
+        <ThemeToggleButton />
         <ProgressBarWithExit
           progress={0.25}
           onExit={() => navigation.goBack()}
@@ -41,14 +55,11 @@ const UserInfoFormScreen = ({navigation}: any) => {
         <Heading style={styles.heading}>
           Please confirm or add to the below your personal information
         </Heading>
-
-        <UserInfoForm ref={formRef} />
-        <Text>{JSON.stringify(formRef.current)}</Text>
+        <ScrollView>
+          <UserInfoForm ref={formRef} />
+        </ScrollView>
         <PoweredBy />
-        <Button
-          title="Continue"
-          onPress={handleContinue}
-        />
+        <Button style={{marginTop: hp(0.4)}} title="Continue" onPress={handleContinue} />
       </SafeAreaView>
     </>
   );
@@ -56,25 +67,25 @@ const UserInfoFormScreen = ({navigation}: any) => {
 
 export default UserInfoFormScreen;
 
-
-
-
-
 export const getStyles = (colors = lightColors) =>
   StyleSheet.create({
-    container: {
-      flex: 1,
-      padding: 24,
-      backgroundColor: colors.LightBackground,
-      justifyContent: 'space-between',
-    },
-    content: {
-      flex: 1,
-    },
-    heading: {
-      fontSize: 19,
-      marginTop: 30,
-      marginBottom: 13,
-      color: colors.PrimaryText,
-    },
+   container: {
+    flexGrow: 1,
+    padding: wp(6),
+    backgroundColor: colors.LightBackground,
+    justifyContent: 'space-between',
+    paddingBottom: hp(2),
+  },
+  content: {
+    flex: 1,
+  },
+  heading: {
+    fontSize: hp(3),
+    marginTop: hp(4),
+    marginBottom: hp(1.5),
+    color: colors.PrimaryText,
+  },
+  btn: {
+    marginTop: hp(2.5),
+  },
   });

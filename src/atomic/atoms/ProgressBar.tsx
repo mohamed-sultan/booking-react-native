@@ -26,13 +26,14 @@ const ProgressBarBase = ({
 
 const getStyles = (colors: any) => StyleSheet.create({
   barBackground: {
-    height: 4,
-    backgroundColor: colors.LightBackground,
-    borderRadius: 4,
+    height: 6,
+    backgroundColor: colors.lightGray,
+    borderRadius: 3,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
+    borderRadius: 3,
   },
 });
 

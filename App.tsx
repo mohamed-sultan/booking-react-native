@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppNavigator from '@navigation/AppNavigator';
 import SplashScreen from '@pages/SplashScreen';
+import './src/config/i18n';
 
 function App(): React.JSX.Element {
   const [showSplash, setShowSplash] = useState(true);

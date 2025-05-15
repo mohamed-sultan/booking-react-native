@@ -11,6 +11,7 @@ const AppText: React.FC<TextProps> = ({style, children, ...props}) => {
 export default AppText;
 const styles = StyleSheet.create({
   defaultStyle: {
+    fontFamily: 'Roboto-Regular',
   },
 });
 

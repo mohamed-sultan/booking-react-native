@@ -1,16 +1,17 @@
 import React from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions, Text} from 'react-native';
 import LottieView from 'lottie-react-native';
 import Button from '../atoms/Button';
-import { heightPercentageToDP } from 'react-native-responsive-screen';
+import {heightPercentageToDP} from 'react-native-responsive-screen';
+import ThemeToggleButton from '@molecules/ThemeToggleButton';
 
-const { width } = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 interface SplashScreenProps {
   onComplete: () => void;
 }
 
-const SplashScreen = ({onComplete}: SplashScreenProps) => {
+const SplashScreen = ({ onComplete }: SplashScreenProps) => {
   return (
     <View style={styles.splashContainer}>
       <LottieView
@@ -19,7 +20,12 @@ const SplashScreen = ({onComplete}: SplashScreenProps) => {
         loop
         style={styles.lottie}
       />
-      <Button style={styles.button} textStyle={styles.buttonText} title="Start" onPress={onComplete} />
+      <Button
+        style={styles.button}
+        textStyle={styles.buttonText}
+        title="Start"
+        onPress={onComplete}
+      />
     </View>
   );
 };
@@ -36,11 +42,13 @@ const styles = StyleSheet.create({
     height: width * 0.7,
   },
   button: {
-    marginTop: 32,
-    height: heightPercentageToDP(5),
+    bottom: heightPercentageToDP(6),
+    zIndex: 1000,
+    position:'absolute',
+    height: heightPercentageToDP(8),
     justifyContent: 'center',
     alignItems: 'center',
-    width: width * 0.7,
+    width: width * 0.8,
   },
   buttonText: {
     fontSize: 16,

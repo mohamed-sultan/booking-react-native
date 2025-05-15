@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import ProgressBar from '@atoms/ProgressBar';
 import ExitButton from '@atoms/ExitButton';
-import {lightColors} from '@constants/colors';
+import { lightColors } from '@constants/colors';
+import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 const ProgressBarWithExit = ({
   progress = 0.25,
@@ -12,7 +13,7 @@ const ProgressBarWithExit = ({
   return (
     <View style={styles.container}>
       <View style={styles.progressContainer}>
-        <ProgressBar progress={progress} color={color} />
+        <ProgressBar progress={progress} />
       </View>
       <View>
         <ExitButton onPress={() => {}} />
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   },
   progressContainer: {
     flex: 1,
-    marginRight: 16,
+    marginRight: wp(4),
   },
 });
 

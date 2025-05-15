@@ -31,9 +31,20 @@
       ],
       "@store/*": [
         "src/stores/*"
-      ]
-    },
-    "skipLibCheck": true,
-    "jsx": "react"
-  }
+      ],
+      "@svg/*": ["assets/svg/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "assets/svg/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*",
+    "**/__mocks__/*",
+    "**/coverage/*",
+    "**/android/*",
+    "**/ios/*"
+  ]
 }
