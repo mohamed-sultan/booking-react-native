@@ -50,14 +50,18 @@ Check out some screens from the app below:
   <img src="assets/demo1.png" alt="Demo 1" width="180" style="margin: 8px;"/>
   <img src="assets/demo2.png" alt="Demo 2" width="180" style="margin: 8px;"/>
   <img src="assets/demo3.png" alt="Demo 3" width="180" style="margin: 8px;"/>
-  <img src="assets/demo4.png" alt="Demo 4" width="180" style="margin: 8px;"/>
-  <img src="assets/demo5.png" alt="Demo 5" width="180" style="margin: 8px;"/>
 </p>
 <p align="center">
+  <img src="assets/demo4.png" alt="Demo 4" width="180" style="margin: 8px;"/>
+  <img src="assets/demo5.png" alt="Demo 5" width="180" style="margin: 8px;"/>
   <img src="assets/demo6.png" alt="Demo 6" width="180" style="margin: 8px;"/>
+</p>
+<p align="center">
   <img src="assets/demo7.png" alt="Demo 7" width="180" style="margin: 8px;"/>
   <img src="assets/demo8.png" alt="Demo 8" width="180" style="margin: 8px;"/>
   <img src="assets/demo9.png" alt="Demo 9" width="180" style="margin: 8px;"/>
+</p>
+<p align="center">
   <img src="assets/demo10.png" alt="Demo 10" width="180" style="margin: 8px;"/>
 </p>
 
