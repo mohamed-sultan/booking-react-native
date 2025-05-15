@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup renders correctly 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+      "gap": 15,
+      "justifyContent": "space-between",
+      "marginTop": 32,
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#6200ee",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flex": 0.5,
+        "marginTop": 32,
+        "opacity": 1,
+        "paddingVertical": 14,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "600",
+          },
+          {
+            "color": "#6200ee",
+          },
+        ]
+      }
+    >
+      Previous
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#6200ee",
+        "borderRadius": 8,
+        "flex": 0.5,
+        "marginTop": 32,
+        "opacity": 1,
+        "paddingVertical": 14,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "600",
+          },
+          undefined,
+        ]
+      }
+    >
+      Continue
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ButtonGroup renders correctly when Continue button is disabled 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+      "gap": 15,
+      "justifyContent": "space-between",
+      "marginTop": 32,
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "#6200ee",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flex": 0.5,
+        "marginTop": 32,
+        "opacity": 1,
+        "paddingVertical": 14,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "600",
+          },
+          {
+            "color": "#6200ee",
+          },
+        ]
+      }
+    >
+      Previous
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#6200ee",
+        "borderRadius": 8,
+        "flex": 0.5,
+        "marginTop": 32,
+        "opacity": 0.5,
+        "paddingVertical": 14,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "600",
+          },
+          undefined,
+        ]
+      }
+    >
+      Continue
+    </Text>
+  </View>
+</View>
+`;

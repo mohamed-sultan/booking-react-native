@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar renders correctly with 0% progress 1`] = `null`;
+
+exports[`ProgressBar renders correctly with 50% progress 1`] = `null`;
+
+exports[`ProgressBar renders correctly with 100% progress 1`] = `null`;
+
+exports[`ProgressBar renders correctly with default progress 1`] = `null`;

@@ -1,0 +1,39 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "jest",
+      "react-native"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@pages/*": [
+        "src/atomic/pages/*"
+      ],
+      "@atoms/*": [
+        "src/atomic/atoms/*"
+      ],
+      "@molecules/*": [
+        "src/atomic/molecules/*"
+      ],
+      "@organisms/*": [
+        "src/atomic/organisms/*"
+      ],
+      "@hook/*": [
+        "src/hooks/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@store/*": [
+        "src/stores/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "jsx": "react"
+  }
+}

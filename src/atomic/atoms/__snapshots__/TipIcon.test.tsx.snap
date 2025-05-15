@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TipIcon renders correctly with a different size 1`] = `null`;
+
+exports[`TipIcon renders correctly with a given size 1`] = `null`;

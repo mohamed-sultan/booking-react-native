@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly with additional props (e.g., multiline) 1`] = `null`;
+
+exports[`Input renders correctly with placeholder 1`] = `null`;
+
+exports[`Input renders correctly with value and custom style 1`] = `null`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextButton renders correctly when selected 1`] = `null`;
+
+exports[`TextButton renders correctly with default props 1`] = `null`;

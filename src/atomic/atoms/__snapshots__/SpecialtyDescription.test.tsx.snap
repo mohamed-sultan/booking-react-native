@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpecialtyDescription renders correctly with an empty description 1`] = `null`;
+
+exports[`SpecialtyDescription renders correctly with title and description 1`] = `null`;

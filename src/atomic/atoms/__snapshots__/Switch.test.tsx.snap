@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch renders correctly when disabled 1`] = `null`;
+
+exports[`Switch renders correctly when disabled 2`] = `null`;
+
+exports[`Switch renders correctly with custom thumbColor and trackColor 1`] = `null`;
+
+exports[`Switch renders correctly with custom thumbColor and trackColor 2`] = `null`;
+
+exports[`Switch renders correctly with value=false 1`] = `null`;
+
+exports[`Switch renders correctly with value=false 2`] = `null`;
+
+exports[`Switch renders correctly with value=true 1`] = `null`;
+
+exports[`Switch renders correctly with value=true 2`] = `null`;

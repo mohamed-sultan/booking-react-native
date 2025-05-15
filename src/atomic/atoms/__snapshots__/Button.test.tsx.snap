@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly when disabled 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#6200ee",
+      "borderRadius": 8,
+      "marginTop": 32,
+      "opacity": 0.5,
+      "paddingVertical": 14,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "white",
+          "fontSize": 16,
+          "fontWeight": "600",
+        },
+        undefined,
+      ]
+    }
+  >
+    Disabled
+  </Text>
+</View>
+`;
+
+exports[`Button renders correctly with given title 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#6200ee",
+      "borderRadius": 8,
+      "marginTop": 32,
+      "opacity": 1,
+      "paddingVertical": 14,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "white",
+          "fontSize": 16,
+          "fontWeight": "600",
+        },
+        undefined,
+      ]
+    }
+  >
+    Press me
+  </Text>
+</View>
+`;

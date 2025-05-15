@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirmed renders correctly with given size 1`] = `
+<View>
+  <mock-icon
+    color="#00FF00"
+    name="checkmark-circle"
+    size={32}
+  />
+</View>
+`;
