@@ -18,30 +18,6 @@
 
 ---
 
-## 📦 Import Aliases
-
-For better code organization and cleaner imports, the following aliases are configured:
-
-| Alias | Path | Description |
-|-------|------|-------------|
-| `@pages/*` | `src/atomic/pages/*` | Page components |
-| `@atoms/*` | `src/atomic/atoms/*` | Atomic UI components |
-| `@molecules/*` | `src/atomic/molecules/*` | Composite components |
-| `@organisms/*` | `src/atomic/organisms/*` | Complex UI sections |
-| `@hook/*` | `src/hooks/*` | Custom React hooks |
-| `@navigation/*` | `src/navigation/*` | Navigation configuration |
-| `@constants/*` | `src/constants/*` | App constants |
-| `@store/*` | `src/stores/*` | State management stores |
-
-Example usage:
-```typescript
-import { Button } from '@atoms/Button';
-import { useAuth } from '@hook/useAuth';
-import { HomePage } from '@pages/Home';
-```
-
----
-
 ## ✨ Features
 
 - 🌍 Localization support
@@ -63,3 +39,26 @@ This project uses [Husky](https://typicode.github.io/husky/) to set up git hooks
 ## 📄 License
 
 MIT
+
+## 📱 App Demo
+
+---
+
+Check out some screens from the app below:
+
+<p align="center">
+  <img src="assets/demo1.png" alt="Demo 1" width="180" style="margin: 8px;"/>
+  <img src="assets/demo2.png" alt="Demo 2" width="180" style="margin: 8px;"/>
+  <img src="assets/demo3.png" alt="Demo 3" width="180" style="margin: 8px;"/>
+  <img src="assets/demo4.png" alt="Demo 4" width="180" style="margin: 8px;"/>
+  <img src="assets/demo5.png" alt="Demo 5" width="180" style="margin: 8px;"/>
+</p>
+<p align="center">
+  <img src="assets/demo6.png" alt="Demo 6" width="180" style="margin: 8px;"/>
+  <img src="assets/demo7.png" alt="Demo 7" width="180" style="margin: 8px;"/>
+  <img src="assets/demo8.png" alt="Demo 8" width="180" style="margin: 8px;"/>
+  <img src="assets/demo9.png" alt="Demo 9" width="180" style="margin: 8px;"/>
+  <img src="assets/demo10.png" alt="Demo 10" width="180" style="margin: 8px;"/>
+</p>
+
+---
