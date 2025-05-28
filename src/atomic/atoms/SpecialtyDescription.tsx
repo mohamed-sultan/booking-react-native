@@ -31,21 +31,23 @@ const getStyles = (colors: any) =>
       paddingHorizontal: wp(3.5),
       borderRadius: wp(3),
       paddingVertical: hp(2),
-      opacity: 0.7,
+    paddingTop:hp(2.5)
+
     },
     title: {
-      fontSize: hp(2),
+      fontSize: 16,
       marginBottom: hp(1),
-      color: colors.darkText,
+      color: colors.PrimaryText,
       marginStart: wp(1.5),
       lineHeight: hp(2.5),
       fontWeight: '700',
+      marginTop:-5
     },
     description: {
       fontSize: hp(1.8),
       color: colors.PrimaryText,
-      lineHeight: hp(3),
-      fontWeight: '650',
+      lineHeight: 24
+    
     },
     titleContainer: {
       flexDirection: 'row',

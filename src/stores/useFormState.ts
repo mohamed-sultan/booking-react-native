@@ -13,6 +13,7 @@ export interface FormStateStore {
   setContactNumber: (number: string) => void;
   setEmail: (email: string) => void;
   setOption: (option: 'yes' | 'no' | '') => void;
+  resetFormState: () => void;
 }
 
 export const useFormState = create<FormStateStore>()(
@@ -28,6 +29,13 @@ export const useFormState = create<FormStateStore>()(
       setContactNumber: (number) => set({ contactNumber: number }),
       setEmail: (email) => set({ email }),
       setOption: (option) => set({ option }),
+      resetFormState: () => set({
+        activeForm: 0,
+        fullName: '',
+        contactNumber: '',
+        email: '',
+        option: '',
+      }),
     }),
     {
       name: 'form-state-storage',

@@ -47,6 +47,7 @@ const UserInfoFormScreen = ({ navigation }: any) => {
         backgroundColor={isDark ? '#000' : '#fff'}
       />
       <SafeAreaView style={styles.container}>
+      <View  style={styles.container}>
         <ThemeToggleButton />
         <ProgressBarWithExit
           progress={0.25}
@@ -56,11 +57,12 @@ const UserInfoFormScreen = ({ navigation }: any) => {
           Please confirm or add to the below your personal information
         </Heading>
         <ScrollView>
-          <UserInfoForm ref={formRef} />
+          <UserInfoForm ref={formRef} />  
         </ScrollView>
-        <PoweredBy />
-        <Button style={{marginTop: hp(0.4)}} title="Continue" onPress={handleContinue} />
-      </SafeAreaView>
+        <PoweredBy /> 
+        <Button style={{marginTop: hp(2)}} title="Continue" onPress={handleContinue} />
+        </View>
+        </SafeAreaView> 
     </>
   );
 };
@@ -75,15 +77,19 @@ export const getStyles = (colors = lightColors) =>
     backgroundColor: colors.LightBackground,
     justifyContent: 'space-between',
     paddingBottom: hp(2),
+    paddingHorizontal:20,
+    borderStartColor:'red'
   },
   content: {
     flex: 1,
   },
   heading: {
-    fontSize: hp(3),
+    fontSize: hp(2.3),
     marginTop: hp(4),
-    marginBottom: hp(1.5),
+    marginBottom: hp(3),
     color: colors.PrimaryText,
+
+    fontWeight:700
   },
   btn: {
     marginTop: hp(2.5),

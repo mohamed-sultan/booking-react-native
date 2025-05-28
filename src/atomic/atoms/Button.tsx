@@ -3,7 +3,7 @@ import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import  { useThemeColors } from '@store/useTheme';
 
 const Button = ({title, onPress, style, textStyle, disabled}: any) => {
-  const colors = useThemeColors();
+  const colors = useThemeColors(); 
   const styles = getStyles(colors);
   return (
     <TouchableOpacity
@@ -20,9 +20,12 @@ export default React.memo(Button);
 const getStyles = (colors: any) => StyleSheet.create({
   button: {
     backgroundColor: colors.PrimaryBackground,
-    paddingVertical: 14,
-    borderRadius: 8,
-    alignItems: 'center',
+    height: 56, 
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius: 15,
+
   },
   buttonText: {
     color: 'white',

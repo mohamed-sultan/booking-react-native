@@ -24,7 +24,7 @@ const getStyles = (colors: any) =>
   StyleSheet.create({
     poweredBy: {
       textAlign: 'center',
-      fontSize: hp(2.2),
+      fontSize: 14,
       color: colors.LightText,
     },
     brand: {

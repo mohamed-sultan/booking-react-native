@@ -68,6 +68,9 @@ const SelectionsScreen = ({ navigation }: any) => {
         animated={true}
       />
       <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+          
+       
         <ThemeToggleButton />
 
         <ProgressBarWithExit progress={0.5} />
@@ -82,7 +85,7 @@ const SelectionsScreen = ({ navigation }: any) => {
               error={errors.option?.message}
             />
           )}
-        />
+        /> 
         <View style={styles.buttonGroup}>
           <PoweredBy />
 
@@ -93,7 +96,8 @@ const SelectionsScreen = ({ navigation }: any) => {
             continueDisabled={!isValid}
             style={styles.btns}
           />
-        </View>
+          </View>
+          </View>
       </SafeAreaView>
     </>
   );
@@ -115,12 +119,12 @@ export const getStyles = (colors = lightColors) =>
   heading: {
     fontSize: hp(3),
     marginTop: hp(5),
-    marginBottom: hp(2),
+    marginBottom: hp(2.8),
     color: colors.PrimaryText,
     fontWeight: 'bold',
   },
   btns: {
-    marginTop: hp(2.5),
+    marginTop: hp(4),
   },
   });
 

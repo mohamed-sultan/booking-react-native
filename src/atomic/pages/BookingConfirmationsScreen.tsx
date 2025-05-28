@@ -7,6 +7,8 @@ import ProgressBarWithExit from '@molecules/ProgressBarWithExit';
 import AlternativeOptionButton from '@atoms/AlternativeOptionButton';
 import SpecialtyDescription from '@atoms/SpecialtyDescription';
 import useTheme, { useThemeColors } from '@store/useTheme';
+import { useFormState } from '@store/useFormState';
+import { ROUTES } from '@navigation/AppNavigator';
 import AppText from '@molecules/AppText';
 import { StyleSheet } from 'react-native';
 import { lightColors } from '@constants/colors';
@@ -17,24 +19,23 @@ import {
 import Confirmed from '@svg/Confirmed';
 import { t } from 'i18next';
 import Animated, {
-  FadeIn,
-  FadeOut,
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
+ 
+  ZoomIn,
+
 } from 'react-native-reanimated';
 import ThemeToggleButton from '@molecules/ThemeToggleButton';
 
-const BookingConfirmationScreen = () => {
-  const [visible, setVisible] = useState(false);
+const BookingConfirmationScreen = ({ navigation }: any) => {
   const colors = useThemeColors();
+  const resetFormState = useFormState(state => state.resetFormState);
 
   const styles = getStyles(colors);
   const {toggleTheme, isDark} = useTheme();
 
-  useEffect(() => {
-    setTimeout(() => setVisible(true), 50); // slight delay ensures it mounts after initial render
-  }, []);
+  const handleDonePress = () => {
+    resetFormState();
+    navigation.navigate(ROUTES.STARTER);
+  };
 
   return (
     <>
@@ -44,6 +45,7 @@ const BookingConfirmationScreen = () => {
         animated={true}
       />
       <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
         <ThemeToggleButton />
         <ProgressBarWithExit progress={1} />
         <ScrollView
@@ -56,20 +58,20 @@ const BookingConfirmationScreen = () => {
           <Heading style={styles.confirmationHeading}>
             {t('booking.confirmed')}
           </Heading>
-          <Animated.View entering={FadeIn}>
+          <Animated.View entering={ZoomIn.delay(200)}>
             <View style={styles.confirmedContainer}>
-              <Confirmed />
+              <Confirmed /> 
             </View>
           </Animated.View>
           <AppText style={styles.recommendationText}>
-            {t('recommendation.intro')}{' '}
+            {t('recommendation.intro')}
             <AppText style={styles.boldText}>
-              {t('recommendation.specialist')}
+              {t('recommendation.specialist')} 
             </AppText>
             .
           </AppText>
           <View style={styles.specialtyContainer}>
-            <SpecialtyDescription
+            <SpecialtyDescription 
               title={t('recommendation.specialist')}
               description={t('recommendation.description')}
             />
@@ -85,13 +87,17 @@ const BookingConfirmationScreen = () => {
           </View>
         </ScrollView>
 
-        <View style={styles.btnContainer}>
+          <View style={styles.btnContainer}>
+            <View style={styles.poweredByContainer}>
+
           <PoweredBy />
+            </View>
           <Button
             title={t('navigation.done')}
-            onPress={() => {}}
+            onPress={handleDonePress}
             style={styles.btn}
           />
+        </View>
         </View>
       </SafeAreaView>
     </>
@@ -111,18 +117,19 @@ export const getStyles = (colors = lightColors) =>
       flexGrow: 1,
     },
     confirmationHeading: {
-      fontSize: hp(3),
-      fontWeight: 'bold',
+      fontSize: 22,
+      fontWeight: 700,
       textAlign: 'left',
       lineHeight: hp(4),
       marginTop: hp(2.5),
       marginBottom: 0,
     },
     recommendationText: {
-      fontSize: hp(2.2),
+      fontSize: 16,
       color: colors.PrimaryText,
       textAlign: 'center',
       marginTop: hp(2.5),
+      lineHeight:28
     },
     boldText: {
       fontWeight: 'bold',
@@ -142,10 +149,12 @@ export const getStyles = (colors = lightColors) =>
       marginTop: hp(2.5),
     },
     btnContainer: {
-      marginTop: hp(2.5),
-      bottom: hp(2.5),
+      marginTop: hp(2),
+      bottom: hp(0),
       position: 'absolute',
       width: '100%',
       alignSelf: 'center',
     },
+    poweredByContainer: {
+    }
   });

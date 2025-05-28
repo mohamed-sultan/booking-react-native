@@ -19,15 +19,15 @@ export default React.memo(TextButton);
 const getStyles = (colors: any) =>
   StyleSheet.create({
     button: {
-      paddingVertical: 20,
+      paddingVertical: 28,
       paddingHorizontal: 24,
       borderWidth: 2,
       borderColor: colors.border,
       borderRadius: 15,
-      marginVertical: 8,
+    marginBottom:25
     },
     selectedButton: {
-      backgroundColor: colors.lightBlue,
+      backgroundColor: colors.lightBlue, 
       borderColor: colors.PrimaryBackground,
     },
     text: {
