@@ -41,11 +41,10 @@ const UserInfoForm = forwardRef((props, ref) => {
 
   const {
     control,
-    formState: {errors, isValid},
+    formState: { isValid},
     getValues,
     trigger,
     reset,
-    setValue,
   } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
@@ -53,7 +52,7 @@ const UserInfoForm = forwardRef((props, ref) => {
       contactNumber,
       email,
     },
-    // mode: 'onChange',
+     mode: 'onChange',
   });
 
   useImperativeHandle(

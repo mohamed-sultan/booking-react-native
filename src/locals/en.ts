@@ -11,7 +11,7 @@ export default {
   'answer.no': 'No',
   'booking.confirmed': 'Booking confirmed',
   'recommendation.intro':
-    'Based on the information you have provided, we think you should speak to an',
+    'Based on the information you have provided,\nwe think you should speak to an',
   'recommendation.specialist': 'Allergist',
   'recommendation.description':
     'An allergist is a doctor who treats allergies and immune system disorders. They diagnose and manage reactions to substances like pollen, food, or medications.',

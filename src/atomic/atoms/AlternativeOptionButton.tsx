@@ -23,13 +23,14 @@ const getStyles = (colors: any) =>
     button: {
       backgroundColor: colors.lighterBg,
       borderRadius: 8,
-      paddingVertical: 12,
+      paddingVertical: 15,
       marginBottom: 32,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 4,
       paddingHorizontal: 16,
+      width: '65%',
+      alignSelf: 'center',
     },
     buttonText: {
       fontSize: 14,

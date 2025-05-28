@@ -42,13 +42,14 @@ const styles = StyleSheet.create({
     height: width * 0.7,
   },
   button: {
-    bottom: heightPercentageToDP(6),
+    bottom: heightPercentageToDP(3),
     zIndex: 1000,
     position:'absolute',
     height: heightPercentageToDP(8),
     justifyContent: 'center',
     alignItems: 'center',
-    width: width * 0.8,
+    width: width * 0.9,
+    borderRadius: 10,
   },
   buttonText: {
     fontSize: 16,

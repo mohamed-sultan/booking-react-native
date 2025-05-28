@@ -65,27 +65,28 @@ export const getStyles = (colors = lightColors) =>
       borderColor: colors.error,
     },
     container: {
-      borderWidth: 1,
-      paddingHorizontal: wp(2.5),
-      paddingTop: hp(2),
-      borderRadius: wp(3),
-      borderColor: colors.border,
+      borderWidth: 0.7,
+      paddingHorizontal: wp(2.7),
+      paddingVertical: hp(1.5),
+      borderRadius:12,
+      borderColor: colors.border, 
       backgroundColor: colors.LightBackground,
     },
     label: {
-      fontSize: hp(2.3),
+      fontSize: 14,
       color: colors.LightText,
-      fontWeight: 'bold',
+      fontWeight: 700,
+      marginBottom:10
     },
     input: {
-      fontSize: hp(2.4),
+      fontSize: 16,
       color: colors.PrimaryText,
       marginBottom: 5,
-      fontWeight: '500',
     },
     errorText: {
       color: colors.error,
-      fontSize: hp(2),
+      fontSize: hp(1.3),
       marginTop: 4,
+      fontWeight:600
     },
   });
